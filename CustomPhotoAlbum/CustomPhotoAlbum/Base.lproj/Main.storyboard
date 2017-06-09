@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ual-Id-Enc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rG6-hq-WRz">
+            <objects>
+                <navigationController id="Ual-Id-Enc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CKJ-1a-r2B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uxg-RC-b5E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAa-8U-o9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-660" y="123"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O88-lI-9EB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Vw9-f1-TCN"/>
+                                    <constraint firstAttribute="height" constant="40" id="eFA-n2-UKI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <state key="normal" title="Create Album">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAlbumButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YUV-Ss-8sg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4B-Oj-bRh">
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="02e-a0-VWx"/>
+                                    <constraint firstAttribute="height" constant="40" id="0Lz-A4-r6A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <state key="normal" title="Show Album">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showAlbumButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SI7-lQ-irh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzW-mm-qNq">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heL-jk-eHS">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gdO-Ey-KIc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Album Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-Fa-IbQ">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SlM-YN-Zbj"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="UUF-WG-O8x"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6L-l9-9gT">
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aWH-9S-V6q"/>
+                                            <constraint firstAttribute="width" constant="100" id="zfm-Fe-CKm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="popupCancelButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQO-Am-Tj5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-yg-8mn">
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CfS-G1-eeT"/>
+                                            <constraint firstAttribute="height" constant="30" id="U7v-Dn-oas"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="popupSaveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qIQ-AF-CB6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YDZ-Fa-IbQ" secondAttribute="trailing" constant="10" id="2oR-yi-nzD"/>
+                                    <constraint firstAttribute="height" constant="200" id="4Cv-Je-JJ0"/>
+                                    <constraint firstAttribute="bottom" secondItem="g9Y-yg-8mn" secondAttribute="bottom" constant="20" id="KZv-oZ-emP"/>
+                                    <constraint firstItem="YDZ-Fa-IbQ" firstAttribute="leading" secondItem="SzW-mm-qNq" secondAttribute="leading" constant="10" id="LJL-mH-q4P"/>
+                                    <constraint firstAttribute="width" constant="240" id="Mn9-OX-xAh"/>
+                                    <constraint firstItem="r6L-l9-9gT" firstAttribute="leading" secondItem="SzW-mm-qNq" secondAttribute="leading" constant="10" id="OGf-Oj-vVr"/>
+                                    <constraint firstItem="heL-jk-eHS" firstAttribute="top" secondItem="SzW-mm-qNq" secondAttribute="top" constant="20" id="Q83-5M-un7"/>
+                                    <constraint firstAttribute="bottom" secondItem="r6L-l9-9gT" secondAttribute="bottom" constant="20" id="QBU-Hl-VbY"/>
+                                    <constraint firstAttribute="trailing" secondItem="g9Y-yg-8mn" secondAttribute="trailing" constant="10" id="WTq-iG-WR7"/>
+                                    <constraint firstItem="heL-jk-eHS" firstAttribute="centerX" secondItem="SzW-mm-qNq" secondAttribute="centerX" id="b7F-P1-FCY"/>
+                                    <constraint firstItem="YDZ-Fa-IbQ" firstAttribute="top" secondItem="heL-jk-eHS" secondAttribute="bottom" constant="20" id="iih-gx-WR4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.30588235294117649" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F4B-Oj-bRh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B7C-Hy-eco"/>
+                            <constraint firstItem="O88-lI-9EB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GgG-ck-2cZ"/>
+                            <constraint firstItem="SzW-mm-qNq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q5Z-hf-CDu"/>
+                            <constraint firstItem="O88-lI-9EB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="ShT-S5-Vyh"/>
+                            <constraint firstItem="SzW-mm-qNq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pyf-NW-QiB"/>
+                            <constraint firstItem="F4B-Oj-bRh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="vhf-JA-kdY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dashboard" id="9Wj-9c-gXJ"/>
+                    <connections>
+                        <outlet property="albumNameTextField" destination="YDZ-Fa-IbQ" id="t7H-f8-aaA"/>
+                        <outlet property="popupView" destination="SzW-mm-qNq" id="sxQ-hy-N5M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="123"/>
+        </scene>
+        <!--Album List View Controller-->
+        <scene sceneID="90o-hB-IVT">
+            <objects>
+                <viewController storyboardIdentifier="AlbumListVCID" id="h91-mE-Aoz" customClass="AlbumListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eTP-0l-XLf"/>
+                        <viewControllerLayoutGuide type="bottom" id="kBB-HU-ngW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qgr-oc-4F1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="nrz-Nk-bDx">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AlbumTableViewCellID" id="Dpn-tt-5ie" customClass="AlbumTableViewCell">
+                                        <rect key="frame" x="0.0" y="1" width="303" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dpn-tt-5ie" id="DC2-9n-XT2">
+                                            <frame key="frameInset" width="303" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-aw-dbP">
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="k9W-aw-dbP" secondAttribute="trailing" constant="20" id="Db2-WV-pPz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="k9W-aw-dbP" secondAttribute="bottom" constant="5" id="Xqb-3e-34X"/>
+                                                <constraint firstItem="k9W-aw-dbP" firstAttribute="leading" secondItem="DC2-9n-XT2" secondAttribute="leadingMargin" constant="20" id="kqL-xS-7dx"/>
+                                                <constraint firstItem="k9W-aw-dbP" firstAttribute="top" secondItem="DC2-9n-XT2" secondAttribute="topMargin" constant="5" id="tOm-6w-A4d"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="albumName" destination="k9W-aw-dbP" id="cj8-FR-9Kb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kBB-HU-ngW" firstAttribute="top" secondItem="nrz-Nk-bDx" secondAttribute="bottom" constant="20" id="AJn-mm-MzQ"/>
+                            <constraint firstItem="nrz-Nk-bDx" firstAttribute="top" secondItem="eTP-0l-XLf" secondAttribute="bottom" constant="60" id="Ub7-Xm-Jiy"/>
+                            <constraint firstItem="nrz-Nk-bDx" firstAttribute="leading" secondItem="Qgr-oc-4F1" secondAttribute="leadingMargin" constant="20" id="Z8x-J9-qHF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nrz-Nk-bDx" secondAttribute="trailing" constant="20" id="lXx-kA-lic"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumListTableView" destination="nrz-Nk-bDx" id="hYV-lR-zxQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ule-ym-2Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="125"/>
+        </scene>
+    </scenes>
+</document>
